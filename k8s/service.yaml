@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: full-stack-node-app
+    app.kubernetes.io/instance: full-stack-node-app-instance
+    app.kubernetes.io/name: full-stack-node-app
+  name: full-stack-node-app
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app.kubernetes.io/instance: full-stack-node-app-instance
+    app.kubernetes.io/name: full-stack-node-app
+  sessionAffinity: None
+  type: ClusterIP
