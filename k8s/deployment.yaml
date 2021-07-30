@@ -30,7 +30,7 @@ spec:
             - name: PROTOCOLS
             - name: LOG_LEVEL
               value: debug
-          image: quay.io/sohaib_ashraf_ibm/full-stack-node-app
+          image: quay.io/danielescaramuzzi/full-stack-node-app
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
